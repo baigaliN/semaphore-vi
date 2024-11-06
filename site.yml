@@ -1,7 +1,8 @@
 ---
-- hosts:my_servers
-  become: true
+- hosts:10.21.68.110
+ become: true
   tasks:
-    - name: Print OS info
+    - name: Install Apache2
       ansible.builtin.package:
-      name: apache2
+        name: apache2
+        state: present
